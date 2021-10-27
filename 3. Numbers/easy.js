@@ -44,7 +44,7 @@ const nOddNums = (n) => {
 	for (let i = 1; n >= 1; i++) {
 		if (i % 2 !== 0) {
 			n = n - 1;
-			arrOfOddNum.shift(i);
+			arrOfOddNum.unshift(i);
 		}
 	}
 	return arrOfOddNum;
