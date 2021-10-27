@@ -32,3 +32,20 @@ const measurementAreas = (l) => {
 
 const profitOrLoss = (cp, sp) =>
 	cp > sp ? `${cp - sp} Loss` : `${sp - cp} profit`;
+
+// sum of N natural digits
+const sumOfNDigits = (n) => (n * (n + 1)) / 2;
+
+// print n number of odd numbers
+
+const nOddNums = (n) => {
+	const arrOfOddNum = [];
+
+	for (let i = 1; n >= 1; i++) {
+		if (i % 2 !== 0) {
+			n = n - 1;
+			arrOfOddNum.shift(i);
+		}
+	}
+	return arrOfOddNum;
+};
