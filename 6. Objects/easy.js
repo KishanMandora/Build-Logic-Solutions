@@ -120,3 +120,63 @@ const totalGrads = (arr) => {
 		`The name of students pass are ${nameOfPassedStudents.map((name) => name)}`
 	);
 };
+
+// CART
+
+const cartItems = [
+	{
+		id: "101",
+		name: "Oreo",
+		count: 2,
+		price: 30.0,
+		discount: 0.18,
+	},
+	{
+		id: "102",
+		name: "Red Bull",
+		count: 1,
+		price: 99.0,
+		discount: 0.15,
+	},
+	{
+		id: "103",
+		name: "Dairy Milk Silk",
+		count: 3,
+		price: 175.0,
+		discount: 0.05,
+	},
+	{
+		id: "104",
+		name: "Pulse Candy Pack",
+		count: 1,
+		price: 135.0,
+		discount: 0.2,
+	},
+];
+
+// Print total no of  items in cart
+
+const totalItems = (cart) =>
+	cart.reduce((total, item) => (total = total + item.count), 0);
+
+// total discount
+const totalDiscout = (cart) =>
+	cart.reduce(
+		(discount, item) => (discount = discount + item.count * item.discount),
+		0
+	);
+
+// total CartValue
+const totalCartValue = (cart) => {
+	const totalDiscoutPrice = totalDiscout(cart);
+	const totalPrice = cart.reduce(
+		(total, item) => (total = total + item.price * item.count),
+		0
+	);
+
+	return totalPrice - totalDiscoutPrice;
+};
+
+// Total Tax Amount
+
+const totalTax = (cart) => (totalCartValue(cart) * 18) / 100;
