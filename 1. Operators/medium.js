@@ -43,6 +43,18 @@ const factorial = (num) => {
 
 // program to find if no is prime or not
 
+const checkPrimeNo = (num) => {
+	if (num < 0) return "Enter a valid input";
+	else if (num < 2) return `${num} is nor prime not composite`;
+	else if (num === 2) `${num} is a prime number`;
+	else {
+		for (let i = 2; i * i <= num; i++) {
+			if (num % i === 0) return `${num} is not a prime nummber`;
+			else return `${num} is a prime number`;
+		}
+	}
+};
+
 // weekend or weekday
 
 const dayChecker = (day) => {
