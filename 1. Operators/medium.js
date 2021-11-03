@@ -31,6 +31,18 @@ const multiplicationTable = (n) => {
 
 // fibonacci
 
+const fibonacci = (n) => {
+	let a = 0;
+	let b = 1;
+
+	for (let i = 0; i < n; i++) {
+		console.log(`${a} \n`);
+		let sum = a + b;
+		a = b;
+		b = sum;
+	}
+};
+
 // factorial
 
 const factorial = (num) => {
