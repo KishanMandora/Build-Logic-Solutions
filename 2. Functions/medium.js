@@ -37,3 +37,11 @@ const mergeArr = (arr1, arr2) => {
 	pushToArr(arr2);
 	return mergedArr;
 };
+
+// character from index
+
+const charAt = (str, index) => {
+	for (let i = 0; i < str.length; i++) {
+		if (i === index) return str[i];
+	}
+};
