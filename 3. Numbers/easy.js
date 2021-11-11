@@ -61,3 +61,18 @@ const sumOfStrDigits = (digits) => {
   }
   return sum;
 };
+
+// reverse a number
+
+const reverseNumber = (num) => {
+  if (typeof num !== "number") return "Please enter numbers";
+  const numStr = JSON.stringify(num);
+
+  let reverse = "";
+  for (let i = numStr.length - 1; i >= 0; i--) {
+    reverse = reverse + numStr[i];
+  }
+
+  return parseInt(reverse);
+};
+// Note:  doesn't work in floats, can also do it using toString()
