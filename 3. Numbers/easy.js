@@ -91,3 +91,18 @@ const decimalToBinary = (num) => {
 
   return parseInt(binary);
 };
+
+// octal to decimal
+
+const octalToDecimal = (num) => {
+  const numStr = JSON.stringify(num);
+  let exponent = numStr.length - 1;
+  let decimalNum = 0;
+  for (let i = 0; i < numStr.length; i++) {
+    const decimal = parseInt(numStr[i]) * Math.pow(8, exponent);
+    decimalNum = decimalNum + decimal;
+    exponent--;
+    console.log(decimal);
+  }
+  return parseInt(decimalNum);
+};
