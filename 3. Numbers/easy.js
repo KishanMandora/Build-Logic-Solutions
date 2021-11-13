@@ -76,3 +76,18 @@ const reverseNumber = (num) => {
   return parseInt(reverse);
 };
 // Note:  doesn't work in floats, can also do it using toString()
+
+// decimal to  binary
+
+const decimalToBinary = (num) => {
+  let remainder;
+  let binary = "";
+
+  while (num !== 0) {
+    remainder = num % 2;
+    num = parseInt(num / 2);
+    binary = remainder + binary;
+  }
+
+  return parseInt(binary);
+};
