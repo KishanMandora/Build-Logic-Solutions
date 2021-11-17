@@ -49,3 +49,22 @@ const countVowelsAndConstants = (str) => {
 };
 
 // shift array by to right
+// ex [1,2,3,4,5] by 1 = [5, 1, 2, 3, 4]
+// ex [1, 2, 3, 4, 5, 6, 7] by 3 = [7, 6, 5, 1, 2, 3, 4]
+
+const arrayRightRotatation = (arr, shift) => {
+  if (shift > arr.length) {
+    return "please enter a value of shift less than  the length of the array";
+  }
+
+  const newArr = [...arr];
+  const rotation = [];
+
+  for (let i = newArr.length - 1; shift > 0; i--) {
+    rotation.push(newArr[i]);
+    newArr.pop();
+    shift--;
+  }
+
+  return [...rotation, ...newArr];
+};
