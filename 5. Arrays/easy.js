@@ -18,6 +18,25 @@ const maxMinOfArr = (arr) => {
 
 // median and mode
 
+const FindMedian = (arr) => {
+  const newArr = [...arr].sort((a, b) => a - b);
+
+  let median;
+  let i;
+  let mode;
+
+  if (newArr.length % 2 === 0) {
+    i = newArr.length / 2;
+    median = (newArr[i] + newArr[i - 1]) / 2;
+  }
+  if (newArr.length % 2 !== 0) {
+    i = parseInt(newArr.length / 2);
+    median = newArr[i];
+  }
+
+  return { median };
+};
+
 // sum of two arrays
 
 const sumOfTwoArr = (arr1, arr2) =>
@@ -46,7 +65,7 @@ const countVowelsAndConstants = (str) => {
   }
 
   return vowelsAndConstantsObj;
-};
+}; // can be done by reduce as well try it out
 
 // shift array by to right
 // ex [1,2,3,4,5] by 1 = [5, 1, 2, 3, 4]
