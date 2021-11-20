@@ -18,7 +18,7 @@ const maxMinOfArr = (arr) => {
 
 // median and mode
 
-const FindMedian = (arr) => {
+const FindMedianMode = (arr) => {
   const newArr = [...arr].sort((a, b) => a - b);
 
   let median;
@@ -34,7 +34,20 @@ const FindMedian = (arr) => {
     median = newArr[i];
   }
 
-  return { median };
+  const modeObj = newArr.reduce((obj, curr) => {
+    `${curr}` in obj ? obj[curr]++ : (obj[curr] = 1);
+    return obj;
+  }, {});
+
+  mode = { no: 0, count: 0 };
+  for (const key in modeObj) {
+    if (modeObj[key] > mode.count) {
+      mode.no = key;
+      mode.count = modeObj[key];
+    }
+  }
+
+  return `${median} is median and ${mode.no} is mode `;
 };
 
 // sum of two arrays
