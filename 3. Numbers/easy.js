@@ -77,6 +77,35 @@ const reverseNumber = (num) => {
 };
 // Note:  doesn't work in floats, can also do it using toString()
 
+// rotate nums
+
+const rotateByX = (num, x) => {
+  const numArr = [];
+  const numbersForRotation = [];
+  let number = num;
+  let numStr = "";
+
+  for (let i = 0; i < number.toString(10).length; i++) {
+    const remainder = num % 10;
+    numArr.unshift(remainder);
+    num = parseInt(num / 10);
+  }
+
+  for (let j = numArr.length - 1; x > 0; x--) {
+    numbersForRotation.unshift(numArr[j]);
+    numArr.pop();
+    j--;
+  }
+
+  const rotatedArray = [...numbersForRotation, ...numArr];
+
+  for (let k = 0; k < rotatedArray.length; k++) {
+    numStr = numStr + rotatedArray[k];
+  }
+
+  return parseInt(numStr);
+};
+
 // decimal to  binary
 
 const decimalToBinary = (num) => {
