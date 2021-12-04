@@ -39,3 +39,25 @@ const toSentenceCase = (str) => {
 
   return sentenceCaseString;
 };
+
+// reverse characters of word
+
+const reverseCharactersOfWord = (str) => {
+  const splitWordsArray = str.split(" ");
+
+  let reversedString = "";
+
+  for (let i = 0; i < splitWordsArray.length; i++) {
+    const wordFromArray = splitWordsArray[i];
+
+    for (let j = wordFromArray.length - 1; j >= 0; j--) {
+      reversedString = reversedString + wordFromArray[j];
+    }
+
+    if (i !== splitWordsArray.length - 1) {
+      reversedString = reversedString + " ";
+    }
+  }
+
+  return reversedString;
+};
