@@ -61,3 +61,21 @@ const reverseCharactersOfWord = (str) => {
 
   return reversedString;
 };
+
+// bubble sort
+
+const bubbleSort = (arr) => {
+  const newArr = [...arr];
+
+  for (let i = 0; i < newArr.length; i++) {
+    for (let j = 1; j < newArr.length - i - 1; j++) {
+      if (newArr[j] > newArr[i]) {
+        const temp = newArr[i];
+        newArr[i] = newArr[j];
+        newArr[j] = temp;
+      }
+    }
+  }
+
+  return newArr;
+};

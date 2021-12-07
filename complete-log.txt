@@ -7,7 +7,7 @@
 2- Functions 
     - easy: complete
     - medium: complete
-    - advanced: pending
+    - advanced: only 3rd pending
 
 ------------------------------------------------------------------------------
 
