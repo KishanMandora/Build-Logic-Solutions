@@ -16,3 +16,7 @@ const convertToUpperCase = (str) => {
 
   return newStr;
 };
+
+// append String
+
+const appendStrings = (str1, str2) => `${str2} ${str1}`;
