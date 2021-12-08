@@ -36,3 +36,27 @@ const encodeLastFour = (str) => {
 
   return newStr;
 };
+
+// first 6 characters in uppercase
+
+const firstSixToUpperCase = (str) => {
+  let newStr = "";
+  let count = 0;
+
+  debugger;
+  for (let i = 0; i < str.length; i++) {
+    if (count < 6) {
+      const characterCode = str.charCodeAt(i);
+      if (characterCode >= 97 && characterCode <= 122) {
+        newStr = newStr + String.fromCharCode(characterCode - 32);
+        count = count + 1;
+      } else {
+        newStr = newStr + str[i];
+      }
+    } else {
+      newStr = newStr + str[i];
+    }
+  }
+
+  return newStr;
+};
