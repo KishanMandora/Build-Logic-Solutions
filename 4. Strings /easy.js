@@ -20,3 +20,19 @@ const convertToUpperCase = (str) => {
 // append String
 
 const appendStrings = (str1, str2) => `${str2} ${str1}`;
+
+// last four characters into #
+
+const encodeLastFour = (str) => {
+  let newStr = "";
+
+  for (let i = 0; i < str.length - 4; i++) {
+    newStr = newStr + str[i];
+  }
+
+  for (let i = str.length - 4; i < str.length; i++) {
+    newStr = newStr + "#";
+  }
+
+  return newStr;
+};
