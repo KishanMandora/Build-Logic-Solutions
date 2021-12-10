@@ -17,3 +17,17 @@ const replaceCharaters = (str, oldCharacter, newCharater) => {
 
   return newStr;
 };
+
+const removeSpaces = (str) => {
+  let newStr = "";
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === " ") {
+      newStr = newStr;
+    } else {
+      newStr = newStr + str[i];
+    }
+  }
+
+  return newStr;
+};
