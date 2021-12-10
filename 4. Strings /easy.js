@@ -43,7 +43,6 @@ const firstSixToUpperCase = (str) => {
   let newStr = "";
   let count = 0;
 
-  debugger;
   for (let i = 0; i < str.length; i++) {
     if (count < 6) {
       const characterCode = str.charCodeAt(i);
