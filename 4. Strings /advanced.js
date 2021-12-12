@@ -31,3 +31,21 @@ const removeSpaces = (str) => {
 
   return newStr;
 };
+
+// alternate ToggleCase
+
+const alternateToggleCase = (str) => {
+  let newStr = "";
+
+  for (let i = 0; i < str.length; i++) {
+    const characterCode = str.charCodeAt(i);
+    if (i % 2 !== 0 && characterCode >= 97 && characterCode <= 122) {
+      newStr = newStr + String.fromCharCode(characterCode - 32);
+    } else {
+      newStr = newStr + str[i];
+    }
+  }
+
+  return newStr;
+};
+// used character code for just coverting lowercase into uppercase
