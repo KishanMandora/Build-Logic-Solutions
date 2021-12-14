@@ -108,3 +108,5 @@ const removeWordFromString = (str, wordToRemove) => {
 
   return newStr.trim();
 };
+// can add edge cases for: if word to remove is not there in string
+// or if data type of word to remove is different
