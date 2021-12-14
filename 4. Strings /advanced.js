@@ -78,3 +78,16 @@ const mostRepeatedCharacter = (str) => {
 
   return `The most repeated character is ${countObj["character"]} with ${countObj["count"]} repeatations`;
 };
+
+// reverse words of sentence
+
+const reverseWordsOfString = (str) => {
+  const stringArr = str.split(" ");
+  let newStr = "";
+
+  for (let i = stringArr.length - 1; i >= 0; i--) {
+    newStr = newStr + stringArr[i] + " ";
+  }
+
+  return newStr.trim();
+};
