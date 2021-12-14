@@ -49,3 +49,32 @@ const alternateToggleCase = (str) => {
   return newStr;
 };
 // used character code for just coverting lowercase into uppercase
+
+// counts most repeated character
+
+const mostRepeatedCharacter = (str) => {
+  const charactersCountObj = {};
+  let countObj = {
+    count: 0,
+    character: "none",
+  };
+
+  for (let i = 0; i < str.length; i++) {
+    const currentChar = str[i];
+
+    if (charactersCountObj[currentChar]) {
+      charactersCountObj[currentChar] = charactersCountObj[currentChar] + 1;
+    } else {
+      charactersCountObj[currentChar] = 1;
+    }
+  }
+
+  for (const objKey in charactersCountObj) {
+    if (charactersCountObj[objKey] > countObj["count"]) {
+      countObj["character"] = objKey;
+      countObj["count"] = charactersCountObj[objKey];
+    }
+  }
+
+  return `The most repeated character is ${countObj["character"]} with ${countObj["count"]} repeatations`;
+};
