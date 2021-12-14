@@ -91,3 +91,20 @@ const reverseWordsOfString = (str) => {
 
   return newStr.trim();
 };
+
+// remove word from the string
+
+const removeWordFromString = (str, wordToRemove) => {
+  const stringArr = str.split(" ");
+  let newStr = "";
+
+  for (let i = 0; i < stringArr.length; i++) {
+    if (stringArr[i] === wordToRemove.trim()) {
+      newStr = newStr;
+    } else {
+      newStr = newStr + stringArr[i] + " ";
+    }
+  }
+
+  return newStr.trim();
+};
