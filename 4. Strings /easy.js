@@ -59,3 +59,17 @@ const firstSixToUpperCase = (str) => {
 
   return newStr;
 };
+
+// characters in a string
+
+const stringLength = (str) => {
+  const newStr = str + "❌";
+  let length = 0;
+
+  for (let i = 0; newStr[i] !== "❌"; i++) {
+    length = length + 1;
+  }
+
+  return length;
+};
+// the problem with above solution is it won't be useful when we have ❌ emoji
