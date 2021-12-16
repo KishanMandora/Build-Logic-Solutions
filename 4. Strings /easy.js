@@ -73,3 +73,8 @@ const stringLength = (str) => {
   return length;
 };
 // the problem with above solution is it won't be useful when we have ❌ emoji
+
+// convert string into integers
+
+const convertToInt = (str) => parseInt(str);
+// try to make own function with same functionality as parseInt
