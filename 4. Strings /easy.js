@@ -78,3 +78,19 @@ const stringLength = (str) => {
 
 const convertToInt = (str) => parseInt(str);
 // try to make own function with same functionality as parseInt
+
+// filter out the vowels from string
+
+const filterVowels = (str) => {
+  const vowels = ["a", "e", "i", "o", "u"];
+  let newStr = "";
+
+  for (let i = 0; i < str.length; i++) {
+    const vowelCheck = vowels.find((vowel) => vowel === str[i]);
+    vowelCheck ? (newStr = newStr) : (newStr = newStr + str[i]);
+  }
+
+  return newStr;
+};
+// can also be done without .find
+// ex: by using multiple or in if statement or second for loop for vowels
