@@ -94,3 +94,21 @@ const filterVowels = (str) => {
 };
 // can also be done without .find
 // ex: by using multiple or in if statement or second for loop for vowels
+
+// check if string is alphabetic or not
+
+const alphanumericStringCheck = (str) => {
+  let digitsStr = "";
+
+  for (let i = 0; i < str.length; i++) {
+    const characterCode = str.charCodeAt(i);
+
+    characterCode >= 48 && characterCode <= 57
+      ? (digitsStr = digitsStr + str[i])
+      : digitsStr;
+  }
+
+  return digitsStr
+    ? `yes it's alphanumeric  string with digits ${digitsStr}`
+    : `not a alphanumeric string`;
+};
