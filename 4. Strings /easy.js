@@ -112,3 +112,24 @@ const alphanumericStringCheck = (str) => {
     ? `yes it's alphanumeric  string with digits ${digitsStr}`
     : `not a alphanumeric string`;
 };
+
+// program that finds longest and smallest of strings
+
+const longestAndSmallestStrings = (...args) => {
+  const longestStr = args.reduce(
+    (prev, curr) =>
+      prev.longest.length < curr.length ? { ...prev, longest: curr } : prev,
+    { longest: "" }
+  );
+
+  const smallestStr = args.reduce(
+    (prev, curr) =>
+      prev.smallest.length < curr.length ? prev : { ...prev, smallest: curr },
+    { smallest: args[0] }
+  );
+
+  console.log(longestStr);
+  console.log(smallestStr);
+};
+// the question was just for 3 strings but we have made it more flexible for n number of strings
+// we can add test case to ensure that only string is entered as argument
