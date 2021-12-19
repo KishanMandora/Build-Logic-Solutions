@@ -168,3 +168,10 @@ const stringLengthGreaterThanSeven = (str) => {
 
   return length > 7 ? true : false;
 };
+// the above solution will have same problem as my stringLength funciton
+
+// copy smaller string into bigger string
+
+const copySmallerString = (str1, str2) =>
+  str1.length > str2.length ? `${str1} ${str2}` : `${str2} ${str1}`;
+// used .length coz we already created our own length funtion
