@@ -133,3 +133,10 @@ const longestAndSmallestStrings = (...args) => {
 };
 // the question was just for 3 strings but we have made it more flexible for n number of strings
 // we can add test case to ensure that only string is entered as argument
+
+// string greater than 7
+const stringLengthGreaterThanSeven = (str) => {
+  const length = stringLength(str); // my own stringLength func I created earlier
+
+  return length > 7 ? true : false;
+};
