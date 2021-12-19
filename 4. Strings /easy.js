@@ -134,6 +134,34 @@ const longestAndSmallestStrings = (...args) => {
 // the question was just for 3 strings but we have made it more flexible for n number of strings
 // we can add test case to ensure that only string is entered as argument
 
+// program that counts vowels and constants in a string
+const consonantsAndVowelsCounter = (str) => {
+  const vowelsArr = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"];
+
+  const alphabetCount = {
+    consonants: 0,
+    vowels: 0,
+  };
+
+  for (let i = 0; i < str.length; i++) {
+    const characterCode = str.charCodeAt(i);
+
+    const characterCheck =
+      (characterCode >= 65 && characterCode <= 90) ||
+      (characterCode >= 97 && characterCode <= 122);
+
+    const vowelCheck = vowelsArr.find((e) => e === str[i]);
+
+    if (vowelCheck) {
+      alphabetCount.vowels = alphabetCount.vowels + 1;
+    } else if (characterCheck) {
+      alphabetCount.consonants = alphabetCount.consonants + 1;
+    }
+  }
+
+  return alphabetCount;
+};
+
 // string greater than 7
 const stringLengthGreaterThanSeven = (str) => {
   const length = stringLength(str); // my own stringLength func I created earlier
