@@ -185,18 +185,15 @@ const palindromeCheck = (str) => {
     (characterCode >= 97 && characterCode <= 122) ||
     (characterCode >= 48 && characterCode <= 57);
 
-  for (let i = 0; i < newStr.length; i++) {
+  for (let i = 0; i < parseInt(newStr.length / 2) + 1; i++) {
     const characterCode = newStr.charCodeAt(i);
+    const characterCode2 = newStr.charCodeAt(newStr.length - i - 1);
 
-    if (!characterCheck(characterCode)) {
+    if (!characterCheck(characterCode) || !characterCheck(characterCode2)) {
       return `please enter only aplhanumeric string`;
     }
-  }
 
-  for (let x = 0; x < parseInt(newStr.length / 2) + 1; x++) {
-    // console.log(`x is ${newStr[x]} aand y is ${newStr[newStr.length - x - 1]}`);
-
-    if (newStr[x] !== newStr[newStr.length - x - 1]) {
+    if (newStr[i] !== newStr[newStr.length - i - 1]) {
       palindrome = false;
     }
   }
@@ -206,3 +203,17 @@ const palindromeCheck = (str) => {
     : `${newStr} is not a palindrome`;
 };
 // can return just true or false if it's a palindrome
+
+// program to remove time  from a string
+// assuming we are given it in this format with a coma(,)
+// ex: "Wed April 15, 7pm".
+
+const removeTimeFromString = (timeStr) => {
+  const timeArr = timeStr.split(",");
+
+  if (timeArr.length > 2) {
+    return `please enter time in given format "Wed April 15, 7pm"`;
+  }
+
+  return timeArr[0];
+};
