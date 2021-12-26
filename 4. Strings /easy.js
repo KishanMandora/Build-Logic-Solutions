@@ -217,3 +217,25 @@ const removeTimeFromString = (timeStr) => {
 
   return timeArr[0];
 };
+
+// our own substring method
+
+const prototypeSubString = (str, indexStart = 0, indexEnd = str.length) => {
+  let subString = "";
+
+  if (indexEnd < indexStart) {
+    const temp = indexStart;
+    indexStart = indexEnd;
+    indexEnd = temp;
+  }
+
+  if (indexEnd > str.length) {
+    indexEnd = str.length;
+  }
+
+  for (let i = indexStart; i < indexEnd; i++) {
+    subString = subString + str[i];
+  }
+
+  return subString;
+};
