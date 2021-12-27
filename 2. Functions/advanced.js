@@ -68,8 +68,8 @@ const bubbleSort = (arr) => {
   const newArr = [...arr];
 
   for (let i = 0; i < newArr.length; i++) {
-    for (let j = 1; j < newArr.length - i - 1; j++) {
-      if (newArr[j] > newArr[i]) {
+    for (let j = i + 1; j < newArr.length; j++) {
+      if (newArr[j] < newArr[i]) {
         const temp = newArr[i];
         newArr[i] = newArr[j];
         newArr[j] = temp;
@@ -79,3 +79,4 @@ const bubbleSort = (arr) => {
 
   return newArr;
 };
+// can also do sorting by merge,quick etc... sorting
