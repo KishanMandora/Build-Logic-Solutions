@@ -193,7 +193,7 @@ class Employee {
   }
 
   getSalary() {
-    return `Net salary of ${this.name} is ${this.netSalary()} ₹`;
+    console.log(`Net salary of ${this.name} is ${this.netSalary()} ₹`);
   }
 
   netSalary() {
@@ -206,3 +206,30 @@ const secondEmployee = new Employee("bond", 7, 2000, 300, 100);
 
 firstEmployee.getSalary();
 secondEmployee.getSalary();
+
+// Bank  Account
+class BankAccount {
+  constructor(name, accountNumber, balance, accountType, ifsc) {
+    this.name = name;
+    this.accountNumber = accountNumber;
+    this.balance = balance;
+    this.accountType = accountType;
+    this.ifsc = ifsc;
+  }
+
+  balanceInfo() {
+    console.log(`${this.name} your balance is ${this.balance}`);
+  }
+}
+
+const customer1 = new BankAccount("luffy", 2, 30000000, "current", "xyz");
+const customer2 = new BankAccount("naruto", 7, 50000, "current", "abc");
+const customer3 = new BankAccount("goku", 9000, 20000, "savings", "jkl");
+
+customer1.balanceInfo();
+customer2.balanceInfo();
+customer3.balanceInfo();
+
+const averageBalance = (...customers) =>
+  customers.reduce((avg, customer) => (avg = avg + customer.balance), 0) /
+  customers.length;
