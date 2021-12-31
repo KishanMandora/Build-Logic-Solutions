@@ -59,3 +59,28 @@ const identityMatrixCheck = (matrix) => {
 
   return "It's a identity matrix";
 };
+
+// transpose
+
+const transposeMatrix = (matrix) => {
+  if (matrix.length <= 1) return "please enter proper matrix";
+
+  const arr = [];
+
+  //   debugger;
+  for (let row = 0; row < matrix[0].length; row++) {
+    arr[row] = new Array(matrix.length);
+    let col = 0;
+    for (let i = 0; i < matrix.length; i++) {
+      for (let j = 0; j < matrix[i].length; j++) {
+        if (row === j) {
+          arr[row][col] = matrix[i][j];
+          col++;
+        }
+      }
+    }
+  }
+
+  return arr;
+};
+// try to improve the  solution and add edge case

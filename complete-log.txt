@@ -23,7 +23,7 @@
 
 5- Arrays
     - easy/medium: complete
-    - advanced: pending
+    - advanced: complete
 
 ------------------------------------------------------------------------------
 
