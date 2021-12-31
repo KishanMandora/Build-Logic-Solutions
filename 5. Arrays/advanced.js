@@ -33,3 +33,29 @@ const sumOfTwoMatrix = (a, b) => {
 
   return matrixSum;
 };
+
+// check if a matrix is identity matrix
+
+const identityMatrixCheck = (matrix) => {
+  let check;
+
+  for (let i = 0; i < matrix.length; i++) {
+    if (matrix.length !== matrix[i].length) {
+      return "It should be a square matrix";
+    }
+
+    for (let j = 0; j < matrix[i].length; j++) {
+      if (i === j) {
+        matrix[i][j] === 1 ? (check = true) : (check = false);
+      } else if (i !== j) {
+        matrix[i][j] === 0 ? (check = true) : (check = false);
+      }
+
+      if (!check) {
+        return "Not a identity matrix";
+      }
+    }
+  }
+
+  return "It's a identity matrix";
+};
