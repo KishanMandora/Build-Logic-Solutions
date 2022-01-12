@@ -63,16 +63,12 @@ const firstSixToUpperCase = (str) => {
 // characters in a string
 
 const stringLength = (str) => {
-  const newStr = str + "❌";
   let length = 0;
-
-  for (let i = 0; newStr[i] !== "❌"; i++) {
+  for (const character of str) {
     length = length + 1;
   }
-
   return length;
 };
-// the problem with above solution is it won't be useful when we have ❌ emoji
 
 // convert string into integers
 
@@ -168,7 +164,6 @@ const stringLengthGreaterThanSeven = (str) => {
 
   return length > 7 ? true : false;
 };
-// the above solution will have same problem as my stringLength funciton
 
 // copy smaller string into bigger string
 
