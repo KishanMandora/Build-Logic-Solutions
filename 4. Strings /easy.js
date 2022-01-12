@@ -67,6 +67,13 @@ const stringLength = (str) => {
   for (const character of str) {
     length = length + 1;
   }
+
+  // OR
+
+  // let len = 0;
+  // for (let i = 0; str[i] !== undefined; i++) {
+  //   len++;
+  // }
   return length;
 };
 
